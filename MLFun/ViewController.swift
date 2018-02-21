@@ -18,7 +18,21 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         if let model = try? VNCoreMLModel(for: self.resnetModel.model) {
-            
+            let request = VNCoreMLRequest(model: model, completionHandler: { (request, error) in
+                if let results = request.results as? [VNClassificationObservation] {
+                    for classification in results {
+                        print("ID: \(classification.identifier) Confidence: \(classification.confidence)")
+                    }
+                }
+                
+            })
+            if let image = UIImage(named: "golfontee") {
+                if let imageData = UIImagePNGRepresentation(image) {
+                    let handler = VNImageRequestHandler(data: imageData, options: [ : ])
+                    try? handler.perform([request])
+                    
+                }
+            }
         }
    
     }
