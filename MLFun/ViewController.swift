@@ -10,18 +10,19 @@ import UIKit
 import CoreML
 import Vision
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var imageView: UIImageView!
-   
     @IBOutlet weak var descriptionLabel: UILabel!
-    
     @IBOutlet weak var confidenceLabel: UILabel!
     
+    var imagePicker = UIImagePickerController()
     let resnetModel = Resnet50()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imagePicker.delegate = self
         
         if let model = try? VNCoreMLModel(for: self.resnetModel.model) {
             let request = VNCoreMLRequest(model: model, completionHandler: { (request, error) in
@@ -43,9 +44,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func cameraTapped(_ sender: Any) {
+        imagePicker.sourceType = .camera
+        present(imagePicker, animated: true, completion: nil)
     }
     
     @IBAction func photoTapped(_ sender: Any) {
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
     }
     
 }
