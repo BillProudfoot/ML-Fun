@@ -12,8 +12,14 @@ import Vision
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var imageView: UIImageView!
+   
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    @IBOutlet weak var confidenceLabel: UILabel!
+    
     let resnetModel = Resnet50()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,7 +40,13 @@ class ViewController: UIViewController {
                 }
             }
         }
-   
     }
+    
+    @IBAction func cameraTapped(_ sender: Any) {
+    }
+    
+    @IBAction func photoTapped(_ sender: Any) {
+    }
+    
 }
 

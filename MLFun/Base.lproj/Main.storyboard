@@ -54,10 +54,23 @@
                     </view>
                     <navigationItem key="navigationItem" title="What is this?" id="XT2-Vy-1dd">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="camera" id="LgS-S1-nMh"/>
-                            <barButtonItem systemItem="organize" id="pX3-Ns-5Cg"/>
+                            <barButtonItem systemItem="camera" id="LgS-S1-nMh">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="BYZ-38-t0r" id="dHz-5O-rgj"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="organize" id="pX3-Ns-5Cg">
+                                <connections>
+                                    <action selector="photoTapped:" destination="BYZ-38-t0r" id="XOa-Ih-99h"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="confidenceLabel" destination="S6W-ro-Dun" id="ase-yw-9de"/>
+                        <outlet property="descriptionLabel" destination="tT3-Ja-GyS" id="42J-Sv-cRf"/>
+                        <outlet property="imageView" destination="07p-YW-4nD" id="5rP-dc-cXl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
