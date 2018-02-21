@@ -35,7 +35,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="tT3-Ja-GyS">
-                                <rect key="frame" x="11" y="519" width="355" height="81"/>
+                                <rect key="frame" x="11" y="454" width="355" height="146"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -51,7 +51,6 @@
                             <constraint firstItem="07p-YW-4nD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Qch-9o-exf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tT3-Ja-GyS" secondAttribute="trailing" constant="9" id="Uo3-hC-0jQ"/>
                             <constraint firstItem="S6W-ro-Dun" firstAttribute="top" secondItem="tT3-Ja-GyS" secondAttribute="bottom" constant="8" symbolic="YES" id="X95-Qy-epp"/>
-                            <constraint firstItem="tT3-Ja-GyS" firstAttribute="top" secondItem="07p-YW-4nD" secondAttribute="bottom" constant="85" id="cu8-fL-g7O"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="S6W-ro-Dun" secondAttribute="bottom" constant="10" id="ieW-cE-fVF"/>
                             <constraint firstItem="tT3-Ja-GyS" firstAttribute="centerX" secondItem="07p-YW-4nD" secondAttribute="centerX" id="nfw-bs-dxI"/>
                             <constraint firstItem="S6W-ro-Dun" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sWM-my-Iu2"/>
